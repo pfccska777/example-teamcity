@@ -34,6 +34,10 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    params {
+        password("env.NEXUS_PASSWORD", "credentialsJSON:1f957ddf-da55-49d1-921b-0238289484a2")
+    }
+
     vcs {
         root(DslContext.settingsRoot)
     }
